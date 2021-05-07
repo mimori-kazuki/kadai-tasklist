@@ -15,11 +15,11 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
         name = "getAllMessages",
-        query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
+        query = "SELECT m FROM tasks AS m ORDER BY m.id DESC"
     )
 })
-@Table(name = "messages")
-public class Message {
+@Table(name = "tasks")
+public class tasks {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -77,5 +77,3 @@ public class Message {
         this.updated_at = updated_at;
     }
 }
-
-
